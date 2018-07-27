@@ -2,32 +2,24 @@
 
 using namespace std;
 
-// piglatin
-
 int main()
 {
+
+    cout << "enter a sentence" << endl;
+
     string sentence;
-    string pigWord;
-    string word;
+    getline(cin, sentence);
 
-    cout << "Enter a sentence to translate into piglatin." << endl;
-
-    int lengthOfWord;
-
-
-
-    while(cin >> word){
-        char temp = word[0];
-        pigWord = word + "-" + temp + "ay";
-
-        lengthOfWord = pigWord.length()-1;
-        pigWord.copy(sentence,1);
-        cout << pigWord << endl;
+    int vowelCnt = 0;
+    for(int i = 0; i < sentence.length(); i++){
+        if(sentence[i] == 'a' || sentence[i] == 'e'|| sentence[i] == 'i' || sentence[i] == 'o' || sentence[i] == 'u'){
+            vowelCnt += 1;
+        }
+        else if(sentence[i] == 'A' || sentence[i] == 'E'|| sentence[i] == 'I' || sentence[i] == 'O' || sentence[i] == 'U'){
+            vowelCnt += 1;
+        }
 
     }
-        cout << sentence << endl;
-
-
-
+    cout << vowelCnt << endl;
     return 0;
 }
