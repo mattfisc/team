@@ -1,25 +1,22 @@
 #include <iostream>
-
+#include "Race.h"
+#include "Human.h"
+#include <string>
+#include "Enemy.h"
+#include "Sword.h"
+#include "Fight.h"
 using namespace std;
 
 int main()
 {
+    Human hero;
+    cout << "Enter a name for your hero..." << endl;
+    hero.setName();
 
-    cout << "enter a sentence" << endl;
+    cout << "Your name is " << hero.getName() << endl;
 
-    string sentence;
-    getline(cin, sentence);
+    Enemy monster;
 
-    int vowelCnt = 0;
-    for(int i = 0; i < sentence.length(); i++){
-        if(sentence[i] == 'a' || sentence[i] == 'e'|| sentence[i] == 'i' || sentence[i] == 'o' || sentence[i] == 'u'){
-            vowelCnt += 1;
-        }
-        else if(sentence[i] == 'A' || sentence[i] == 'E'|| sentence[i] == 'I' || sentence[i] == 'O' || sentence[i] == 'U'){
-            vowelCnt += 1;
-        }
 
-    }
-    cout << vowelCnt << endl;
     return 0;
 }

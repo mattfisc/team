@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1531381906 source:c:\users\matthew fischer\desktop\cpp\game\main.cpp
+	<iostream>
+	"Race.h"
+	"Human.h"
+	<string>
+	"Enemy.h"
+	"Sword.h"
+	"Fight.h"
+
+1531386839 c:\users\matthew fischer\desktop\cpp\game\race.h
+
+1531062780 c:\users\matthew fischer\desktop\cpp\game\human.h
+
+1531381906 source:c:\users\matthew fischer\desktop\cpp\game\race.cpp
+	<iostream>
+	"Race.h"
+	"Human.h"
+	<string>
+	"Enemy.h"
+	"Sword.h"
+	"Fight.h"
+
+1531381906 source:c:\users\matthew fischer\desktop\cpp\game\human.cpp
+	<iostream>
+	"Race.h"
+	"Human.h"
+	<string>
+	"Enemy.h"
+	"Sword.h"
+	"Fight.h"
+
+1531381906 source:c:\users\matthew fischer\desktop\cpp\game\enemy.cpp
+	<iostream>
+	"Race.h"
+	"Human.h"
+	<string>
+	"Enemy.h"
+	"Sword.h"
+	"Fight.h"
+
+1531061881 c:\users\matthew fischer\desktop\cpp\game\enemy.h
+
+1531060801 c:\users\matthew fischer\desktop\cpp\game\sword.h
+
+1531056413 source:c:\users\matthew fischer\desktop\cpp\game\sword.cpp
+	<iostream>
+	"Race.h"
+	"Human.h"
+	<string>
+	"Enemy.h"
+	"Sword.h"
+
+1531381906 c:\users\matthew fischer\desktop\cpp\game\fight.h
+
