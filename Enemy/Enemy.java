@@ -15,13 +15,64 @@ public class Enemy {
     
     // DECLARE VARIABLES
     protected int health;
-    protected int damage;
-    protected double dodge;
-    protected double accuracy;
+    protected int dexterity;
+    protected int strength;
     protected int xp;
+    
+    protected int damage;
+    
+    Weapon hand = new Weapon();
     
     public Enemy(){
         
     }
+    
+    public int getDamage() {
+        return strength + hand.getDamage();
+    }
+
+
+    public Weapon getHand() {
+        return hand;
+    }
+
+    // getters and setters
+    public void setHand(Weapon hand) {    
+        this.hand = hand;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health += health;
+    }
+
+    public int getDexterity() {
+        return dexterity;
+    }
+
+    public void setDexterity(int dexterity) {
+        this.dexterity = dexterity;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public int getXp() {
+        return xp;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
+    
+    
    
 }

@@ -13,9 +13,8 @@ import Weapons.Weapon;
 public class Fist  extends Weapon{
     
     //CONTSTRUCTOR
-    public Fist(int damage){
-        this.damage = damage;
+    public Fist(){
         range = 1;
-        durability = 100;
+        durability = 99;
     }
 }

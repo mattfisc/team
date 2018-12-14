@@ -14,11 +14,12 @@ import Weapons.Weapon;
 public class Dwarf  extends Player{
 
     public Dwarf() {
-        hand = new Fist(strength);
-        health = 150;
-        dodge = .2;
-        accuracy = .8;
-        strength = 3;
+        hand = new Fist();
+        level = 1;
+        
+        health = 12;
+        dexterity = 6;
+        strength = 10;
     }
 
     

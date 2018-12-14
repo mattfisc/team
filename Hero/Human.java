@@ -12,12 +12,17 @@ import Fight.*;
 
 public class Human extends Player{
 
+    
     public Human() {
-        //hand = new Fist(strength);
-        health = 100;
-        dodge = .5;
-        accuracy = .75;
-        strength = 2;
+        hand = new Fist();
+        level = 1;
+        
+        health = 8;
+        dexterity = 8;
+        strength = 8;
+        
+        meleeDamage = strength + hand.getDamage();
+        rangeDamage = dexterity + hand.getDamage();
         
     }
 

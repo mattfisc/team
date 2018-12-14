@@ -14,11 +14,12 @@ import Weapons.Weapon;
 public class Elf  extends Player{
 
     public Elf() {
-        hand = new Fist(strength);
-        health = 80;
-        dodge = .8;
-        accuracy = .9;
-        strength = 1;
+        hand = new Fist();
+        level = 1;
+
+        health = 7;
+        dexterity = 11;
+        strength = 7;
     }
 
     

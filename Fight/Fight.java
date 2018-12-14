@@ -8,43 +8,57 @@ import Enemy.*;
 import java.util.*;
 import Hero.*;
 import Weapons.*;
-import Fight.*;
 import static Hero.Player.in;
 
 public class Fight {
     
     // Data members
     boolean fight = true;
-    double heroAc;
-    double enemyAc;
+    
+
     int heroAttack;
     int enemyAttack;
-    Player hero1;
-    Enemy enemy1;
+    
+    Player hero;
+    Enemy enemy;
     
     
     public Fight(Player hero,Enemy enemy){
-        heroAc = hero.getAccuracy();
-        
-        
+        this.hero = hero;
+        this.enemy = enemy;
         
         // battle
         while(fight == true){
             
             // hero attack
-            if(accuracy(heroAc) == true){
+            if(hitChance(hero.getDexterity()) == true){
                 
-                // hero damage
-                heroAttack = rollDamage(hero.getHand().getDamage());
+                // hero damage roll
+                heroAttack = roll( hero.getHand().getDamage() );
                 
-                // enemy health decreases
-                
+                // enemy health minus damage roll
+                enemy.setHealth(-heroAttack);
             }    
             
             // enemy attack
-            //if(accuracy(enemyAc)){
+            if(hitChance(enemy.getDexterity() ) == true){
+                
+                // enemy attack
+                enemyAttack = roll( enemy.getStrength() + enemy.getDamage());
+                
+                // hero health damage damage roll
+                hero.setHealth(-enemyAttack);
+            }
             
-            //}
+            // display damage
+            System.out.println("");
+            System.out.println("Hero damage: " + heroAttack);
+            System.out.println("Enemy damage: " + enemyAttack);
+            
+            // display health
+            System.out.println("Hero health: " + hero.getHealth() );
+            System.out.println("Enemy health: " + enemy.getHealth() );
+            
             
             // Continue fight check
             fleeOrFight();
@@ -55,10 +69,10 @@ public class Fight {
 
     }
     // hit or miss
-    public boolean accuracy(double accur){
+    public boolean hitChance(int dexterity){
         boolean hitChance = true;
         
-        if(accur > Math.random()){
+        if(hero.getDexterity() < (int)(Math.random() * (dexterity + 1)) ){
             hitChance = false;
         }
         
@@ -84,8 +98,8 @@ public class Fight {
     }
     
     // damage roll
-    public int rollDamage(int damage){
-        return (int)Math.random() * damage + 1;
+    public int roll(int damage){
+        return (int)(Math.random() * (damage + 1) );
     }
     
 }

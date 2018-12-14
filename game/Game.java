@@ -29,7 +29,7 @@ public class Game
         
         // Create Player
         System.out.println("Creating Player");
-        Player hero;
+        Player hero = new Player();
         
         
         // Introduce Race Abilities
@@ -39,8 +39,8 @@ public class Game
         int choice = Player.choosePlayer();
         
         // Create Player
-        hero = Player.createPlayer(choice);
-        
+        hero = Player.createPlayer(hero,choice);
+
         // NAME PLAYER
         System.out.println("Enter a name for the player");
         hero.setName( in.nextLine() );
@@ -53,12 +53,13 @@ public class Game
         
         hero.displayHeroAbilities(hero);
         
-        hero.getHand().setDamage(hero.getStrength());
         
-        Enemy enemy1 = new Basic();
         
+        Enemy e = new Basic();
+        
+        System.out.println("hero total damage " + hero.getMeleeDamage());
         // fight
-        Fight f1 = new Fight(hero,enemy1);
+        Fight f1 = new Fight(hero,e);
         
         
     }

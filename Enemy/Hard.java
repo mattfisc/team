@@ -13,42 +13,14 @@ import Fight.*;
 public class Hard extends Enemy{
     
     public Hard(){
-        health = 30;
-        damage = 10;
-        dodge = .25;
-        accuracy = .9;
-        xp = 75;
+        health = 40;
+        dexterity = 8;
+        strength = 8;
+        
+        xp = 50;
+        hand = new Axe();
+        damage = strength + hand.getDamage();
     }
 
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-
-    public void setDodge(double dodge) {
-        this.dodge = dodge;
-    }
-
-    public void setAccuracy(double accuracy) {
-        this.accuracy = accuracy;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public int getDamage() {
-        return damage;
-    }
-
-    public double getDodge() {
-        return dodge;
-    }
-
-    public double getAccuracy() {
-        return accuracy;
-    }
+    
 }

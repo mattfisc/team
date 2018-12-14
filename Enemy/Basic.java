@@ -15,41 +15,13 @@ public class Basic extends Enemy{
     // CONSTRUCTOR
     public Basic(){
         health = 10;
-        damage = 5;
-        dodge = .1;
-        accuracy = .5;
-        xp = 25;
+        dexterity = 5;
+        strength = 5;
+        
+        xp = 10;
+        hand = new Fist();
+        damage = strength + hand.getDamage();
     }
 
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-
-    public void setDodge(double dodge) {
-        this.dodge = dodge;
-    }
-
-    public void setAccuracy(double accuracy) {
-        this.accuracy = accuracy;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public int getDamage() {
-        return damage;
-    }
-
-    public double getDodge() {
-        return dodge;
-    }
-
-    public double getAccuracy() {
-        return accuracy;
-    }
+    
 }
