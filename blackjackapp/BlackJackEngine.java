@@ -18,9 +18,7 @@ public class BlackJackEngine {
     public BlackJackEngine(){
         // Create Deck
         myDeck = new Deck();
-        
-        
-        
+
     }
 
     // Hit me
