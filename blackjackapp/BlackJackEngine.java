@@ -7,7 +7,6 @@ package blackjackapp;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class BlackJackEngine {
     // Data Members
     Deck myDeck;
@@ -42,6 +41,7 @@ public class BlackJackEngine {
         return hit;
     }
     
+    
     // ----- playGame -------
     public void playGame(){
         // Start Game
@@ -50,7 +50,9 @@ public class BlackJackEngine {
         // Shuffle Cards in Deck
         myDeck.shuffle();
         
+        
         // Player gets two cards
+        playerHand = new ArrayList<Card>();
         playerHand.add( myDeck.dealCard() );
         playerHand.add( myDeck.dealCard() );
         
@@ -59,11 +61,12 @@ public class BlackJackEngine {
         showHand(playerHand);
         
         // Dealer gets two cards 
-        playerHand.add( myDeck.dealCard() );
-        playerHand.add( myDeck.dealCard() );
+        dealerHand = new ArrayList<Card>();
+        dealerHand.add( myDeck.dealCard() );
+        dealerHand.add( myDeck.dealCard() );
         // Show Dealers Hand
         System.out.println("The dealer's hand is: ");
-        showHand(playerHand);
+        showHand(dealerHand);
 
         // Repeat hit me until end of game
         
@@ -92,10 +95,10 @@ public class BlackJackEngine {
     public void showHand(ArrayList<Card> hand){
         
         for( int i = 0; i < hand.size(); i++ ){
-            if( hand.get(i).isFaceUp() == false)
+            if( hand.get(i).isFaceUp() == true)
                 System.out.println( "\t" + hand.get(i).toString() );
             else
-                System.out.println("Card (isFaceDown)");
+                System.out.println("\tCard (isFaceDown)");
                         
         }
     }
