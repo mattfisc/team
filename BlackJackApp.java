@@ -31,7 +31,6 @@ public class BlackJackApp {
           break;
         }
         // this is practice
-        // checking push to ht
       }
     
 }
